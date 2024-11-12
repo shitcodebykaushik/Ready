@@ -1,0 +1,31 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Book Your Trip" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <TextField hint="From" text="{{ fromLocation }}" class="input" />
+            <TextField hint="To" text="{{ toLocation }}" class="input" />
+            
+            <Label text="Departure Date" class="mb-2" />
+            <DatePicker date="{{ departureDate }}" class="mb-4" />
+            
+            <Label text="Return Date" class="mb-2" />
+            <DatePicker date="{{ returnDate }}" class="mb-4" />
+            
+            <TextField hint="Number of Passengers" text="{{ passengers }}" keyboardType="number" class="input" />
+            
+            <Button text="Search Flights" tap="{{ onSearchFlights }}" class="btn mb-4" />
+            
+            <Label text="Available Flights" class="text-xl font-bold mb-4" visibility="{{ hasFlights ? 'visible' : 'collapsed' }}" />
+            <ListView items="{{ flights }}" visibility="{{ hasFlights ? 'visible' : 'collapsed' }}">
+                <ListView.itemTemplate>
+                    <StackLayout class="card">
+                        <Label text="{{ airline }}" class="font-bold" />
+                        <Label text="{{ price }}" class="text-green-600" />
+                        <Button text="Book Now" tap="{{ $parent.onBookFlight }}" class="btn-sm" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</Page>

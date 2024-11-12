@@ -1,0 +1,70 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" backgroundColor="#F7F7F7">
+    <ActionBar title="Travel App" backgroundColor="#FF6D6D" color="#FFFFFF">
+        <NavigationButton visibility="collapsed" />
+        <ActionItem ios.position="right" android.position="actionBar" text="Book" tap="{{ onGoToBooking }}" color="#FFFFFF" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout padding="16">
+
+            <!-- Carousel/Banner -->
+            <StackLayout style="margin-bottom: 24; elevation: 3; border-radius: 10;">
+                <Image src="../assets/banner.jpg" height="180" stretch="aspectFill" style="border-radius: 10;" />
+            </StackLayout>
+
+            <!-- Category Buttons -->
+            <GridLayout columns="*,*,*,*" style="margin-bottom: 24;">
+                <StackLayout col="0" style="align-items: center;">
+                    <Image src="../assets/flight.jpg" height="50" width="50" />
+                    <Label text="Flights" style="font-size: 12; color: #333333; text-align: center; margin-top: 4;" />
+                </StackLayout>
+                <StackLayout col="1" style="align-items: center;">
+                    <Image src="../assets/hotel.jpg" height="50" width="50" />
+                    <Label text="Hotels" style="font-size: 12; color: #333333; text-align: center; margin-top: 4;" />
+                </StackLayout>
+                <StackLayout col="2" style="align-items: center;">
+                    <Image src="../assets/cars.jpg" height="50" width="50" />
+                    <Label text="Cars" style="font-size: 12; color: #333333; text-align: center; margin-top: 4;" />
+                </StackLayout>
+                <StackLayout col="3" style="align-items: center;">
+                    <Image src="../assets/activities.jpg" height="50" width="50" />
+                    <Label text="Activities" style="font-size: 12; color: #333333; text-align: center; margin-top: 4;" />
+                </StackLayout>
+            </GridLayout>
+
+            <!-- Popular Destinations Section -->
+            <Label text="Popular Destinations" style="font-size: 20; font-weight: bold; color: #FF6D6D; margin-bottom: 16;" />
+
+            <GridLayout rows="auto, auto" columns="*, *" style="margin-bottom: 16;">
+                
+                <!-- Paris Card -->
+                <StackLayout col="0" style="margin: 8; padding: 12; border-radius: 10; elevation: 3; background-color: #FFFFFF;">
+                    <Image src="../assets/paris.jpg" height="120" stretch="aspectFill" style="border-radius: 8;" />
+                    <Label text="Paris" style="font-size: 16; font-weight: bold; color: #333333; margin-top: 8;" />
+                    <Label text="France" style="font-size: 14; color: #999999;" />
+                </StackLayout>
+
+                <!-- Tokyo Card -->
+                <StackLayout col="1" style="margin: 8; padding: 12; border-radius: 10; elevation: 3; background-color: #FFFFFF;">
+                    <Image src="../assets/paris.jpg" height="120" stretch="aspectFill" style="border-radius: 8;" />
+                    <Label text="Tokyo" style="font-size: 16; font-weight: bold; color: #333333; margin-top: 8;" />
+                    <Label text="Japan" style="font-size: 14; color: #999999;" />
+                </StackLayout>
+
+                <!-- New York Card -->
+                <StackLayout row="1" col="0" style="margin: 8; padding: 12; border-radius: 10; elevation: 3; background-color: #FFFFFF;">
+                    <Image src="../assets/newyork.jpg" height="120" stretch="aspectFill" style="border-radius: 8;" />
+                    <Label text="New York" style="font-size: 16; font-weight: bold; color: #333333; margin-top: 8;" />
+                    <Label text="USA" style="font-size: 14; color: #999999;" />
+                </StackLayout>
+
+                <!-- Rome Card -->
+                <StackLayout row="1" col="1" style="margin: 8; padding: 12; border-radius: 10; elevation: 3; background-color: #FFFFFF;">
+                    <Image src="../assets/Rome.jpg" height="120" stretch="aspectFill" style="border-radius: 8;" />
+                    <Label text="Rome" style="font-size: 16; font-weight: bold; color: #333333; margin-top: 8;" />
+                    <Label text="Italy" style="font-size: 14; color: #999999;" />
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>

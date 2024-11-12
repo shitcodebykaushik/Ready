@@ -1,0 +1,28 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" backgroundColor="#F7F7F7">
+    <ActionBar title="Sign Up" backgroundColor="#FF6D6D" color="#FFFFFF" style="font-size: 20;" />
+
+    <StackLayout padding="24" style="background: linear-gradient(180deg, #FFFFFF, #F7F7F7); border-radius: 20; elevation: 4;">
+        <Label text="Create Account" style="font-size: 24; font-weight: bold; color: #FF6D6D; text-align: center; margin-bottom: 24;" />
+
+        <!-- Full Name Text Field -->
+        <StackLayout padding="16" backgroundColor="#FFFFFF" style="margin-bottom: 16; border-radius: 12; elevation: 3; border-width: 1; border-color: #ECECEC;">
+            <TextField hint="Full Name" text="{{ fullName }}" style="font-size: 16; color: #333333; placeholder-color: #999999;" />
+        </StackLayout>
+
+        <!-- Email Text Field -->
+        <StackLayout padding="16" backgroundColor="#FFFFFF" style="margin-bottom: 16; border-radius: 12; elevation: 3; border-width: 1; border-color: #ECECEC;">
+            <TextField hint="Email" text="{{ email }}" keyboardType="email" style="font-size: 16; color: #333333; placeholder-color: #999999;" />
+        </StackLayout>
+
+        <!-- Password Text Field -->
+        <StackLayout padding="16" backgroundColor="#FFFFFF" style="margin-bottom: 24; border-radius: 12; elevation: 3; border-width: 1; border-color: #ECECEC;">
+            <TextField hint="Password" text="{{ password }}" secure="true" style="font-size: 16; color: #333333; placeholder-color: #999999;" />
+        </StackLayout>
+
+        <!-- Sign Up Button -->
+        <Button text="Sign Up" tap="{{ onSignup }}" backgroundColor="#FF6D6D" color="#FFFFFF" style="font-size: 18; padding: 16 0; border-radius: 12; margin-bottom: 20; elevation: 4;" />
+
+        <!-- Back to Login Button -->
+        <Button text="Back to Login" tap="{{ onGoToLogin }}" backgroundColor="#FFFFFF" color="#FF6D6D" style="font-size: 18; padding: 14 0; border-radius: 12; border-color: #FF6D6D; border-width: 1; elevation: 2;" />
+    </StackLayout>
+</Page>
